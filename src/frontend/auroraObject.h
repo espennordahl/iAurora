@@ -31,6 +31,16 @@ namespace Aurora {
         
         void applyAttributeChange(const AttributeChange &change);
         
+            // Splits the shape into triangles.
+		void dice( std::vector<std::shared_ptr<Geometry> > &diced);
+        
+            // Called once all objects have been parsed, and
+            // is responsible for initializing the correct AttributeState for the object
+            // and convert all geometry to renderable triangles and add them to the
+            // passed vector.
+		void makeRenderable(std::vector<RenderableTriangle> &renderable, AttributeState *attrs, int index);
+
+        
         std::string m_matName;
 
 		Material *m_material;

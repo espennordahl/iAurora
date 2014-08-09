@@ -28,8 +28,10 @@ namespace Aurora {
         void clearCache(){
             m_shape->clearCache();
         }
+        
+        void dice( std::vector<std::shared_ptr<Geometry> > &diced) ;
 
-	protected:        
+	protected:
         std::shared_ptr<Shape> m_shape;
 	};
 }

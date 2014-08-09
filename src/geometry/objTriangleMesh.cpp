@@ -91,6 +91,10 @@ ObjTriangleMesh::ObjTriangleMesh( const Transform *o2c, const Transform *c2o, in
         delete[] UV;
 }
 
+void ObjTriangleMesh::dice( std::vector<std::shared_ptr<Geometry> > &diced){
+    m_shape->dice(diced);
+}
+
 BBox ObjTriangleMesh::objectBound() const{
 	return BBox();
 }

@@ -12,6 +12,7 @@
 #include "materials.h"
 #include "lights.h"
 #include "shadingEngine.h"
+#include "kdTreeAccelerator.h"
 
 #include "log.h"
 #define lcontext LOG_Renderer
@@ -109,25 +110,19 @@ void Renderer::buildRenderEnvironment(){
         // acceleration structure
     AccelerationStructure *accel;
     
-//    int numObjects = (int)m_objects.size();
-//    int numLights = (int)m_lights.size();
-//    m_attrs = new AttributeState[numObjects + numLights];
-//    EmbreeMesh mesh;
-//    for (int i=0; i < numObjects; i++) {
-//        mesh.appendTriangleMesh(m_objects[i]->m_shape, i);
-//        m_attrs[i].material = m_objects[i]->m_material;
-//        m_attrs[i].emmision = Color(0.);
-//    }
-//    for (int i=0; i < numLights; i++){
-//        if (m_lights[i]->lightType != type_envLight){
-//            mesh.appendTriangleMesh(m_lights[i]->shape(), i + numObjects);
-//        }
-//        Material * black = new ConstantMaterial("Not in use - lightsource", Color(0.f), UNSET_SHADER_INDEX, &m_renderEnv);
-//        m_attrs[i + numObjects].material = black;
-//        m_attrs[i + numObjects].emmision = m_lights[i]->emission();
-//    }
-//    accel = new EmbreeAccelerator(mesh, m_attrs);
+    int numObjects = (int)m_objects.size();
+    int numLights = (int)m_lights.size();
+    m_attrs = new AttributeState[numObjects + numLights];
+    std::vector<RenderableTriangle> renderable;
+    for (int i=0; i < numObjects; i++) {
+        m_objects[i]->makeRenderable(renderable, m_attrs, i);
+    }
+    for (int i=0; i < numLights; i++) {
+        m_lights[i]->makeRenderable(renderable, m_attrs, numObjects + i);
+    }
     
+    accel = new KdTreeAccelerator(renderable, KD_INTERSECTCOST, KD_TRAVERSECOST, KD_EMPTYBONUS, (*m_renderEnv.globals)[KD_MaxLeaf], (*m_renderEnv.globals)[KD_MaxDepth]);
+
 	m_renderEnv.accelerationStructure = accel;
 	m_renderEnv.attributeState = m_attrs;
 	m_renderEnv.lights = m_lights;

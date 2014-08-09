@@ -63,3 +63,20 @@ void TriangleMesh::clearCache(){
     if(vertexIndex)
         delete[] vertexIndex;
 }
+
+void TriangleMesh::dice( std::vector<std::shared_ptr<Geometry> > &diced){
+	for (int t=0; t < _numTriangles; t++) {
+        std::shared_ptr<Geometry> tri = std::shared_ptr<Geometry>(
+                                                new TriangleGeo(objectToCamera, cameraToObject,
+                                                                P[vertexIndex[t*3]],
+                                                                P[vertexIndex[t*3+1]],
+                                                                P[vertexIndex[t*3+2]],
+                                                                N[vertexIndex[t*3]],
+                                                                N[vertexIndex[t*3+1]],
+                                                                N[vertexIndex[t*3+2]],
+                                                                UV[t*3],
+                                                                UV[t*3+1],
+                                                                UV[t*3+2]));
+		diced.push_back(tri);
+	}
+}

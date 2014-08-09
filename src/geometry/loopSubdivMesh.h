@@ -51,6 +51,8 @@ namespace Aurora{
             m_trimesh.clearCache();
         };
         
+        void dice( std::vector<std::shared_ptr<Geometry> > &diced) ;
+        
     private:
         static float beta(int valence);
         static float gamma(int valence);

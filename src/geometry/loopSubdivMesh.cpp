@@ -561,6 +561,11 @@ Shape(o2c, c2o)
     delete[] faces[0];
 }
 
+void LoopSubdivMesh::dice( std::vector<std::shared_ptr<Geometry> > &diced){
+    m_trimesh.dice(diced);
+}
+
+
 
 void LoopSubdivMesh::weightOneRing(set<Point, PointCompare> &unique, SDVertex *destVert, SDVertex *vert,
                                float beta) const

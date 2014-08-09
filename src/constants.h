@@ -22,6 +22,11 @@
 // ray tracing
 #define RAY_BIAS 0.0005
 
+    // kd tree
+#define KD_INTERSECTCOST 1
+#define KD_TRAVERSECOST 1
+#define KD_EMPTYBONUS 1
+
 // kelemen albedo cache settings
 #define SPECALBEDO_SAMPLES 250000
 #define SPECALBEDO_COSTHETA_ENTRIES 64

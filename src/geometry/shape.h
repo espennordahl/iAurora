@@ -44,8 +44,10 @@ namespace Aurora {
         virtual bool isGeometryCached(){
             return !m_dirtygeo;
         }
+        
+            // Splits the geometry into triangles
+		virtual void dice( std::vector<std::shared_ptr<Geometry> > &diced) = 0;
 
-    protected:
             // Object transforms. It's important that if the object moves,
             // that we create new transforms as they're potentially shared
             // for effeciency

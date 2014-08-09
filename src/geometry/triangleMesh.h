@@ -27,6 +27,8 @@ namespace Aurora {
         int numVertices(){ return _numVertices; };
         
         void clearCache();
+        
+        void dice( std::vector<std::shared_ptr<Geometry> > &diced) ;
 
     private:
         BBox wBound;

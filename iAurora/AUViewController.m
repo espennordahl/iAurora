@@ -8,6 +8,8 @@
 
 #import "AUViewController.h"
 
+#import "AURenderer.h"
+
 @interface AUViewController ()
 
 @end
@@ -18,6 +20,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"Allocating renderer.");
+    
+    AURenderer *renderer = [[AURenderer alloc] init];
+    [renderer render];
 }
 
 - (void)didReceiveMemoryWarning

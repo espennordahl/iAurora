@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		232EA7811996696A008A4732 /* kdTreeAccelerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 232EA77F1996696A008A4732 /* kdTreeAccelerator.cpp */; };
+		232EA78519966B70008A4732 /* AURenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 232EA78419966B70008A4732 /* AURenderer.m */; };
 		23D0B93C198500FD00EEC329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93B198500FD00EEC329 /* Foundation.framework */; };
 		23D0B93E198500FD00EEC329 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93D198500FD00EEC329 /* CoreGraphics.framework */; };
 		23D0B940198500FD00EEC329 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93F198500FD00EEC329 /* UIKit.framework */; };
@@ -87,6 +89,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		232EA77F1996696A008A4732 /* kdTreeAccelerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kdTreeAccelerator.cpp; sourceTree = "<group>"; };
+		232EA7801996696A008A4732 /* kdTreeAccelerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kdTreeAccelerator.h; sourceTree = "<group>"; };
+		232EA7821996699D008A4732 /* voxel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voxel.h; sourceTree = "<group>"; };
+		232EA78319966B70008A4732 /* AURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AURenderer.h; sourceTree = "<group>"; };
+		232EA78419966B70008A4732 /* AURenderer.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AURenderer.m; sourceTree = "<group>"; };
 		23D0B938198500FD00EEC329 /* iAurora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAurora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D0B93B198500FD00EEC329 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23D0B93D198500FD00EEC329 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -313,6 +320,8 @@
 				23D0B951198500FD00EEC329 /* AUViewController.m */,
 				23D0B953198500FD00EEC329 /* Images.xcassets */,
 				23D0B942198500FD00EEC329 /* Supporting Files */,
+				232EA78319966B70008A4732 /* AURenderer.h */,
+				232EA78419966B70008A4732 /* AURenderer.m */,
 			);
 			path = iAurora;
 			sourceTree = "<group>";
@@ -443,6 +452,9 @@
 		23D0B9A61985012C00EEC329 /* geometry */ = {
 			isa = PBXGroup;
 			children = (
+				232EA7821996699D008A4732 /* voxel.h */,
+				232EA77F1996696A008A4732 /* kdTreeAccelerator.cpp */,
+				232EA7801996696A008A4732 /* kdTreeAccelerator.h */,
 				23D0B9A71985012C00EEC329 /* accelerationStructure.h */,
 				23D0B9AB1985012C00EEC329 /* geometry.h */,
 				23D0B9AC1985012C00EEC329 /* infiniteAreaLight.cpp */,
@@ -732,6 +744,7 @@
 				23D0BA121985012C00EEC329 /* specMirror.cpp in Sources */,
 				23D0BA291985014100EEC329 /* main.cpp in Sources */,
 				23D0B9F61985012C00EEC329 /* point.cpp in Sources */,
+				232EA7811996696A008A4732 /* kdTreeAccelerator.cpp in Sources */,
 				23D0B9FF1985012C00EEC329 /* auroraObject.cpp in Sources */,
 				23D0BA101985012C00EEC329 /* cookTorrance.cpp in Sources */,
 				23D0BA071985012C00EEC329 /* loopSubdivMesh.cpp in Sources */,
@@ -758,6 +771,7 @@
 				23D0BA1F1985012C00EEC329 /* jsonParser.cpp in Sources */,
 				23D0BA1C1985012C00EEC329 /* shaderAttribute.cpp in Sources */,
 				23D0BA4A19851ED800EEC329 /* json_writer.cpp in Sources */,
+				232EA78519966B70008A4732 /* AURenderer.m in Sources */,
 				23D0BA1D1985012C00EEC329 /* noise3D.cpp in Sources */,
 				23D0B9F51985012C00EEC329 /* pixelRegion.cpp in Sources */,
 				23D0B9FE1985012C00EEC329 /* attributeChange.cpp in Sources */,
@@ -977,6 +991,7 @@
 				23D0B96C198500FD00EEC329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23D0B96D198500FD00EEC329 /* Build configuration list for PBXNativeTarget "iAuroraTests" */ = {
 			isa = XCConfigurationList;
@@ -985,6 +1000,7 @@
 				23D0B96F198500FD00EEC329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
