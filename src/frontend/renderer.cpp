@@ -161,35 +161,37 @@ void Renderer::renderImage(){
     time_t drawTime;
     time(&drawTime);
     int lightSamples = 1;
-    for(int i=0; i<multisamples; ++i){
+    for(int progression=0; progression<multisamples; ++progression){
         time_t currentTime;
         time_t progressionStartTime;
         time(&progressionStartTime);
 
-            // generate sample
-        int x = i % width;
-        int y = (int)i / width;
-        Sample2D current_sample_2d = Sample2D(x, y);
-        
-        Sample3D sample = m_renderEnv.renderCam->convertSample(current_sample_2d, i);
-        
-        Integrator::IntegrationResult integrationResult = m_integrator->integrateCameraSample(sample, lightSamples);
-        
-        m_displayDriver->appendValue(x, y, integrationResult.color, integrationResult.alpha);
-        m_numrays++;
+        for (int i=0; i < width*height; ++i) {
+                // generate sample
+            int x = i % width;
+            int y = (int)i / width;
+            Sample2D current_sample_2d = Sample2D(x, y);
+            
+            Sample3D sample = m_renderEnv.renderCam->convertSample(current_sample_2d, i);
+            
+            Integrator::IntegrationResult integrationResult = m_integrator->integrateCameraSample(sample, lightSamples);
+            
+            m_displayDriver->appendValue(x, y, integrationResult.color, integrationResult.alpha);
+            m_numrays++;
+        }
         
         time(&currentTime);
         int timeSinceLastDraw = difftime(currentTime, drawTime);
-        if((!i || timeSinceLastDraw > DRAW_DELAY)) {
+        if((!progression || timeSinceLastDraw > DRAW_DELAY)) {
 //            m_displayDriver->draw(height);
             time(&drawTime);
             lightSamples = (*m_renderEnv.globals)[LightSamples];
         }
         
-        LOG_INFO("Render progress: " << 100 * (i+1)/(float)multisamples << "%");
+        LOG_INFO("Render progress: " << 100 * (progression+1)/(float)multisamples << "%");
         time(&currentTime);
         int progtime = difftime(currentTime, progressionStartTime);
-        int remaining = progtime * (multisamples - (i+1));
+        int remaining = progtime * (multisamples - (progression+1));
         LOG_INFO("Estimated time remaining: " << floor(remaining/60/60) << "h" << floor(remaining/60)%60 << "min" << remaining%60 << "sec.");
         double speed = (m_numrays * 0.001) / std::max(1, progtime);
         LOG_INFO("Current speed: " << speed << "K rays/sec.");

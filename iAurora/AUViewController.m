@@ -25,6 +25,8 @@
     
     AURenderer *renderer = [[AURenderer alloc] init];
     self.view = [[UIImageView alloc] initWithImage:[renderer render]];
+
+    NSLog(@"Updated view. You should see a render at this point..");
 }
 
 - (void)didReceiveMemoryWarning
