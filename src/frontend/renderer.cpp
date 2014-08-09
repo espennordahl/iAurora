@@ -153,12 +153,8 @@ void Renderer::renderImage(){
     if(fn == ""){
         LOG_ERROR("Render output filename is blank");
     }
-    if (!m_displayDriver) {
-        m_displayDriver = new OpenexrDisplay(width, height, fn, &m_renderEnv);
-    } else {
-        m_displayDriver->clear();
-        m_displayDriver->resize(width, height);
-    }
+
+    m_displayDriver = new Display(width, height, fn, &m_renderEnv);
 
     m_integrator = new Integrator::Integrator(&m_renderEnv);
     
@@ -185,7 +181,7 @@ void Renderer::renderImage(){
         time(&currentTime);
         int timeSinceLastDraw = difftime(currentTime, drawTime);
         if((!i || timeSinceLastDraw > DRAW_DELAY)) {
-            m_displayDriver->draw(height);
+//            m_displayDriver->draw(height);
             time(&drawTime);
             lightSamples = (*m_renderEnv.globals)[LightSamples];
         }
@@ -221,19 +217,21 @@ void Renderer::outputStats(){
     std::string stringTime =    intToString(floor(totalTime/60/60)) + " h " +
                                 intToString(floor((totalTime/60) % 60)) + " min "+
                                 intToString(totalTime % 60) + " sec.";
-    m_displayDriver->addMetadata(std::string("renderTime"), stringTime);
+//    m_displayDriver->addMetadata(std::string("renderTime"), stringTime);
     
     // Rays
     LOG_INFO("Average speed: " << m_rayspeed << "K rays/sec.");
     std::string stringSpeed = intToString(m_rayspeed) + "K rays/sec.";
-    m_displayDriver->addMetadata(std::string("RaySpeed"), stringSpeed);
+//    m_displayDriver->addMetadata(std::string("RaySpeed"), stringSpeed);
     
 	LOG_INFO("Done outputting statistics.");
     LOG_INFO("*************************************\n");
 }
 
 void Renderer::postRenderCleanup(){
-    m_displayDriver->draw(m_displayDriver->height());
+//    m_displayDriver->draw(m_displayDriver->height());
+
+    pixels = m_displayDriver->pixels();
 
     delete m_renderEnv.accelerationStructure;
     delete m_renderEnv.attributeState;

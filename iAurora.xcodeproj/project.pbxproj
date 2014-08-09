@@ -40,7 +40,7 @@
 		23D0B9FF1985012C00EEC329 /* auroraObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B9981985012C00EEC329 /* auroraObject.cpp */; };
 		23D0BA001985012C00EEC329 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B99A1985012C00EEC329 /* camera.cpp */; };
 		23D0BA011985012C00EEC329 /* integrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B99D1985012C00EEC329 /* integrator.cpp */; };
-		23D0BA021985012C00EEC329 /* openexrDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B99F1985012C00EEC329 /* openexrDisplay.cpp */; };
+		23D0BA021985012C00EEC329 /* display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B99F1985012C00EEC329 /* display.cpp */; };
 		23D0BA031985012C00EEC329 /* renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B9A21985012C00EEC329 /* renderer.cpp */; };
 		23D0BA041985012C00EEC329 /* texture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B9A41985012C00EEC329 /* texture2D.cpp */; };
 		23D0BA061985012C00EEC329 /* infiniteAreaLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23D0B9AC1985012C00EEC329 /* infiniteAreaLight.cpp */; };
@@ -157,10 +157,10 @@
 		23D0B99C1985012C00EEC329 /* frontEndObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frontEndObject.h; sourceTree = "<group>"; };
 		23D0B99D1985012C00EEC329 /* integrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = integrator.cpp; sourceTree = "<group>"; };
 		23D0B99E1985012C00EEC329 /* integrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integrator.h; sourceTree = "<group>"; };
-		23D0B99F1985012C00EEC329 /* openexrDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = openexrDisplay.cpp; sourceTree = "<group>"; };
-		23D0B9A01985012C00EEC329 /* openexrDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openexrDisplay.h; sourceTree = "<group>"; };
+		23D0B99F1985012C00EEC329 /* display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = display.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		23D0B9A01985012C00EEC329 /* display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = display.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		23D0B9A11985012C00EEC329 /* renderEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = renderEnvironment.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		23D0B9A21985012C00EEC329 /* renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderer.cpp; sourceTree = "<group>"; };
+		23D0B9A21985012C00EEC329 /* renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = renderer.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		23D0B9A31985012C00EEC329 /* renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = renderer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		23D0B9A41985012C00EEC329 /* texture2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture2D.cpp; sourceTree = "<group>"; };
 		23D0B9A51985012C00EEC329 /* texture2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture2D.h; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		23D0B9C71985012C00EEC329 /* constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = constant.cpp; sourceTree = "<group>"; };
 		23D0B9C81985012C00EEC329 /* constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
 		23D0B9C91985012C00EEC329 /* cookTorrance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cookTorrance.cpp; sourceTree = "<group>"; };
-		23D0B9CA1985012C00EEC329 /* cookTorrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cookTorrance.h; sourceTree = "<group>"; };
+		23D0B9CA1985012C00EEC329 /* cookTorrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = cookTorrance.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		23D0B9CB1985012C00EEC329 /* lambert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lambert.cpp; sourceTree = "<group>"; };
 		23D0B9CC1985012C00EEC329 /* lambert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lambert.h; sourceTree = "<group>"; };
 		23D0B9CD1985012C00EEC329 /* specMirror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = specMirror.cpp; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		23D0B9D61985012C00EEC329 /* constantMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constantMaterial.h; sourceTree = "<group>"; };
 		23D0B9D71985012C00EEC329 /* glassMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glassMaterial.cpp; sourceTree = "<group>"; };
 		23D0B9D81985012C00EEC329 /* glassMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glassMaterial.h; sourceTree = "<group>"; };
-		23D0B9D91985012C00EEC329 /* kelemenMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kelemenMaterial.cpp; sourceTree = "<group>"; };
+		23D0B9D91985012C00EEC329 /* kelemenMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = kelemenMaterial.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		23D0B9DA1985012C00EEC329 /* kelemenMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kelemenMaterial.h; sourceTree = "<group>"; };
 		23D0B9DB1985012C00EEC329 /* material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = material.cpp; sourceTree = "<group>"; };
 		23D0B9DC1985012C00EEC329 /* materials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = materials.h; sourceTree = "<group>"; };
@@ -441,8 +441,8 @@
 				23D0B99C1985012C00EEC329 /* frontEndObject.h */,
 				23D0B99D1985012C00EEC329 /* integrator.cpp */,
 				23D0B99E1985012C00EEC329 /* integrator.h */,
-				23D0B99F1985012C00EEC329 /* openexrDisplay.cpp */,
-				23D0B9A01985012C00EEC329 /* openexrDisplay.h */,
+				23D0B99F1985012C00EEC329 /* display.cpp */,
+				23D0B9A01985012C00EEC329 /* display.h */,
 				23D0B9A11985012C00EEC329 /* renderEnvironment.h */,
 				23D0B9A21985012C00EEC329 /* renderer.cpp */,
 				23D0B9A31985012C00EEC329 /* renderer.h */,
@@ -731,7 +731,7 @@
 				23D0B9FA1985012C00EEC329 /* sampler2D.cpp in Sources */,
 				23D0BA191985012C00EEC329 /* matteMaterial.cpp in Sources */,
 				23D0B9F31985012C00EEC329 /* color.cpp in Sources */,
-				23D0BA021985012C00EEC329 /* openexrDisplay.cpp in Sources */,
+				23D0BA021985012C00EEC329 /* display.cpp in Sources */,
 				23D0B9F81985012C00EEC329 /* sample2D.cpp in Sources */,
 				23D0BA081985012C00EEC329 /* objParser.cpp in Sources */,
 				23D0BA131985012C00EEC329 /* specTransmit.cpp in Sources */,

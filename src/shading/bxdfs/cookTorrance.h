@@ -14,7 +14,7 @@
 #include "core.h"
 #include "brdf.h"
 #include "texture2D.h"
-#include "openexrDisplay.h"
+#include "display.h"
 
 namespace Aurora {
     

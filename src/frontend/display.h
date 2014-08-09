@@ -12,24 +12,15 @@
 #include "core.h"
 #include "frontEndObject.h"
 
-//#include "ImfArray.h"
-//#include "ImfRgba.h"
-
 #include <string.h>
 
 namespace Aurora {
-	class OpenexrDisplay : FrontEndObject{
+	class Display : FrontEndObject{
 	public:	
-		OpenexrDisplay(int width, int height, std::string file, RenderEnvironment * renderEnv);
+		Display(int width, int height, std::string file, RenderEnvironment * renderEnv);
 		
 		void setPixel(int width, int height, const Color &col, float alpha);
         void appendValue(int width, int height, const Color &col, float alpha);
-		void getPixel(int width, int height, Color *col, float *alpha);
-		void draw(int numLines);		
-        void addMetadata(const std::string &key, const std::string &value);
-        
-        void clear();
-        void resize(int width, int height);
         
         int height() const;
         int width() const;
@@ -37,20 +28,15 @@ namespace Aurora {
         void frameBegin();
         void frameEnd();
         
-        const std::string filename() const;
-        
-        char *copy();
-        char *proxy(int level);
+        u_char *pixels();
 
 	private:
         int m_width;
         int m_height;
-//        Imf::Array2D<Imf::Rgba> m_pixel_buffer;
-        bool m_hasBuffer;
-        u_char *m_copied_buffer;
         std::vector<std::vector < int > > m_multisample_buffer;
-        StringMap m_metadata;
-		std::string m_filename;
+        std::vector<std::vector < Color > > m_rgb;
+        std::vector<std::vector < float > > m_a;
+        u_char *m_pixels;
 	};
 }
 

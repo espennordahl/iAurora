@@ -12,7 +12,7 @@
 #include "camera.h"
 #include "renderEnvironment.h"
 #include "auroraObject.h"
-#include "openexrDisplay.h"
+#include "display.h"
 #include "lights.h"
 #include "options.h"
 #include "integrator.h"
@@ -33,6 +33,8 @@ namespace Aurora{
 	public:
         Renderer(std::string file);
 		void render();
+        
+        u_char *pixels;
         
 	private:
         void parseSceneDescription();
@@ -55,7 +57,7 @@ namespace Aurora{
 		InfiniteAreaLight *m_envLight;
 		RenderEnvironment m_renderEnv;
 		AttributeState *m_attrs;
-		OpenexrDisplay *m_displayDriver;
+		Display *m_displayDriver;
         Integrator *m_integrator;
     };
 }
