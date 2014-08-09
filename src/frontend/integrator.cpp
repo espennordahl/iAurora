@@ -143,9 +143,10 @@ void Integrator::updateLocalGeometry(const Sample3D &sample, Integrator::LocalGe
         // with smooth normals there's a change we get normals
         // on the "back side" of the ray.
     if (dot(lg->Vn, lg->Nn) <= 0.) {
-            // If so we force it to the front.
-        Vector tmp = cross(lg->Nn, lg->Vn);
-        lg->Nn = normalize(cross(lg->Vn, tmp));
+//            // If so we force it to the front.
+//        Vector tmp = cross(lg->Nn, lg->Vn);
+//        lg->Nn = normalize(cross(lg->Vn, tmp));
+        lg->Nn = -lg->Nn;
     }
 }
 

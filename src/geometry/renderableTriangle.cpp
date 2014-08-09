@@ -118,6 +118,9 @@ bool RenderableTriangle::intersect( Ray *ray, Intersection *intersection ) const
 	intersection->hitP = hitp;
 	intersection->attributesIndex = attributes;
     intersection->shdGeo.barCoords = Point(b0,b1,b2);
+    intersection->shdGeo.Ng = normalize(norm);
+    intersection->shdGeo.Ns = normalize(norm);
+    intersection->shdGeo.P = hitp;
 		
 	return true;
 }

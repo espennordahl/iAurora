@@ -26,7 +26,7 @@
     Aurora::Renderer rnd = Aurora::Renderer([filename UTF8String]);
     rnd.render();
     
-    int width = 512; int height = 512;
+    int width = 60; int height = 90;
     
     CGDataProviderRef provider = CGDataProviderCreateWithData(NULL,
                                                               rnd.pixels,
