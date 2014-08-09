@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		232EA7811996696A008A4732 /* kdTreeAccelerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 232EA77F1996696A008A4732 /* kdTreeAccelerator.cpp */; };
 		232EA78519966B70008A4732 /* AURenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 232EA78419966B70008A4732 /* AURenderer.m */; };
+		232EA78719966E9E008A4732 /* tmp.asc in Resources */ = {isa = PBXBuildFile; fileRef = 232EA78619966E9E008A4732 /* tmp.asc */; };
 		23D0B93C198500FD00EEC329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93B198500FD00EEC329 /* Foundation.framework */; };
 		23D0B93E198500FD00EEC329 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93D198500FD00EEC329 /* CoreGraphics.framework */; };
 		23D0B940198500FD00EEC329 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93F198500FD00EEC329 /* UIKit.framework */; };
@@ -94,6 +95,7 @@
 		232EA7821996699D008A4732 /* voxel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voxel.h; sourceTree = "<group>"; };
 		232EA78319966B70008A4732 /* AURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AURenderer.h; sourceTree = "<group>"; };
 		232EA78419966B70008A4732 /* AURenderer.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AURenderer.m; sourceTree = "<group>"; };
+		232EA78619966E9E008A4732 /* tmp.asc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tmp.asc; sourceTree = "<group>"; };
 		23D0B938198500FD00EEC329 /* iAurora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAurora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D0B93B198500FD00EEC329 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23D0B93D198500FD00EEC329 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -280,6 +282,7 @@
 		23D0B92F198500FD00EEC329 = {
 			isa = PBXGroup;
 			children = (
+				232EA78619966E9E008A4732 /* tmp.asc */,
 				23D0B9701985011400EEC329 /* Aurora */,
 				23D0B941198500FD00EEC329 /* iAurora */,
 				23D0B960198500FD00EEC329 /* iAuroraTests */,
@@ -703,6 +706,7 @@
 				23D0BA4619851ED800EEC329 /* json_internalmap.inl in Resources */,
 				23D0BA4519851ED800EEC329 /* json_internalarray.inl in Resources */,
 				23D0B946198500FD00EEC329 /* InfoPlist.strings in Resources */,
+				232EA78719966E9E008A4732 /* tmp.asc in Resources */,
 				23D0B94F198500FD00EEC329 /* Main.storyboard in Resources */,
 				23D0BA281985014100EEC329 /* halton_gen.py in Resources */,
 			);

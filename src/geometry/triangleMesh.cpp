@@ -74,9 +74,9 @@ void TriangleMesh::dice( std::vector<std::shared_ptr<Geometry> > &diced){
                                                                 N[vertexIndex[t*3]],
                                                                 N[vertexIndex[t*3+1]],
                                                                 N[vertexIndex[t*3+2]],
-                                                                UV[t*3],
-                                                                UV[t*3+1],
-                                                                UV[t*3+2]));
+                                                                UV[vertexIndex[t*3]],
+                                                                UV[vertexIndex[t*3+1]],
+                                                                UV[vertexIndex[t*3+2]]));
 		diced.push_back(tri);
 	}
 }

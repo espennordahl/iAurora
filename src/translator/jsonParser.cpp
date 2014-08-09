@@ -35,6 +35,7 @@ bool JsonParser::parseScene(std::string *error){
     Json::Reader reader;
 
     std::ifstream sceneDescription( filename.c_str() );
+
     if ( !reader.parse(sceneDescription, deserializeRoot) )
         LOG_ERROR("Couldn't parse file: " << filename);    
     else{

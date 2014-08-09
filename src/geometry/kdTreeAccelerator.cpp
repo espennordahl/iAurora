@@ -12,7 +12,7 @@
 #include "kdTreeAccelerator.h"
 
 #include "log.h"
-#define lcontext LOG_Gridaccel
+#define lcontext LOG_KdTreeAccel
 
 
 using namespace Aurora;

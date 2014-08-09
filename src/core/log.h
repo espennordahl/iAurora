@@ -53,7 +53,7 @@ struct lc{
 #define LOG_Subdiv              lc(Log::Debug,  "Subdiv")
 #define LOG_Material            lc(Log::Debug,  "Material")
 #define LOG_Integrator          lc(Log::Debug,  "Integrator")
-#define LOG_Gridaccel           lc(Log::Debug,	"GridAccel")
+#define LOG_KdTreeAccel         lc(Log::Debug,	"KdTreeAccel")
 
 class Log
 {
