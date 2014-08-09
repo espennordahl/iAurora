@@ -75,13 +75,13 @@ u_char *Display::pixels(){
     for (int i=0; i<m_height; i++) {
 		for (int j=0; j<m_width; j++) {
 			Color &p = m_rgb[i][j];
-            *channel = 255 * pow(std::min((float)p.r, 1.f), 0.45454545);
+            *channel = 50;//255 * pow(std::min((float)p.r, 1.f), 0.45454545);
             ++channel;
-            *channel = 255 * pow(std::min((float)p.g, 1.f), 0.45454545);
+            *channel = 200;//255 * pow(std::min((float)p.g, 1.f), 0.45454545);
             ++channel;
-            *channel = 255 * pow(std::min((float)p.b, 1.f), 0.45454545);
+            *channel = 50;//255 * pow(std::min((float)p.b, 1.f), 0.45454545);
             ++channel;
-            *channel = 255 * std::min((float)m_a[i][j], 1.f);
+            *channel = 255;//255 * std::min((float)m_a[i][j], 1.f);
             ++channel;
 		}
 	}

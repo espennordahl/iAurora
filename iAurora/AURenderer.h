@@ -10,6 +10,6 @@
 
 @interface AURenderer : NSObject
 
--(void)render;
+-(UIImage *)render;
 
 @end

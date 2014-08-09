@@ -24,7 +24,7 @@
     NSLog(@"Allocating renderer.");
     
     AURenderer *renderer = [[AURenderer alloc] init];
-    [renderer render];
+    self.view = [[UIImageView alloc] initWithImage:[renderer render]];
 }
 
 - (void)didReceiveMemoryWarning
