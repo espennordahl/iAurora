@@ -54,7 +54,8 @@ namespace Aurora {
     
     Sample3D SquareLight::generateSample( const Point &orig, const Vector &Nn, const IntegrationDomain &integrationDomain){
 #ifdef USE_HALTON
-        const int i = m_halton_index.fetch_and_increment();
+        const int i = m_halton_index;  // TODO: thread safe
+        ++m_halton_index;
         float x = m_sampler.sample(LIGHT_DOMAIN_X, i);
         float y = m_sampler.sample(LIGHT_DOMAIN_Y, i);
 #else

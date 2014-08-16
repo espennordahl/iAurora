@@ -54,6 +54,7 @@ struct lc{
 #define LOG_Material            lc(Log::Debug,  "Material")
 #define LOG_Integrator          lc(Log::Debug,  "Integrator")
 #define LOG_KdTreeAccel         lc(Log::Debug,	"KdTreeAccel")
+#define LOG_Scene               lc(Log::Debug,	"Scene")
 
 class Log
 {

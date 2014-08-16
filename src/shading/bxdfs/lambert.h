@@ -41,7 +41,8 @@ namespace Aurora {
     
     Sample3D Lambert::getSample(const Vector &Vn, const Vector &Nn, bxdfParameters *parameters) const{
 #ifdef USE_HALTON
-        const int i = m_halton_index.fetch_and_increment();
+        const int i = m_halton_index;
+        ++m_halton_index; // TODO: thread safe
         float r1 = m_sampler.sample(SURFACE_DOMAIN_X, i);
         float r2 = m_sampler.sample(SURFACE_DOMAIN_Y, i);
 #else

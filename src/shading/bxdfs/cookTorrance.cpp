@@ -48,7 +48,8 @@ Sample3D CookTorrance::getSample(const Vector &Vn, const Vector &Nn, bxdfParamet
     CookTorranceParameters *params = static_cast<CookTorranceParameters*>(parameters);
     
 #ifdef USE_HALTON
-    const int i = m_halton_index.fetch_and_increment();
+    const int i = m_halton_index;  // TODO: thread safe
+    ++m_halton_index;
     float r1 = m_sampler.sample(SURFACE_DOMAIN_X, i);
     float r2 = m_sampler.sample(SURFACE_DOMAIN_Y, i);
 #else

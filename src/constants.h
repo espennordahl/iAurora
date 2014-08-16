@@ -34,7 +34,7 @@
 #define SPECALBEDO_REFLECTANCE_ENTRIES 21
 
     // quasi monte carlo
-    //#define USE_HALTON
+    // #define USE_HALTON
 
 #define CAMERA_DOMAIN_X 0
 #define CAMERA_DOMAIN_Y 1
@@ -45,7 +45,7 @@
 #define LIGHT_DOMAIN_X 4
 #define LIGHT_DOMAIN_Y 5
 
-#define VERSION "0.2"
+#define VERSION "0.3"
 
 // base paths
 #define CONFIGPATH "/Users/espennordahl/Documents/Aurora/XCode/Aurora/Aurora/config.json"

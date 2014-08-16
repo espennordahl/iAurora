@@ -21,8 +21,8 @@
 
 using namespace Aurora;
 
-Display::Display(int width, int height, std::string file, RenderEnvironment * renderEnv) :
-FrontEndObject("Display:" + file, renderEnv),
+Display::Display(int width, int height, RenderEnvironment * renderEnv) :
+FrontEndObject("Display:foo", renderEnv),
 m_width(width),
 m_height(height)
 {

@@ -9,6 +9,7 @@
 #ifndef Aurora_renderer_h
 #define Aurora_renderer_h
 
+#include "scene.h"
 #include "camera.h"
 #include "renderEnvironment.h"
 #include "auroraObject.h"
@@ -31,8 +32,7 @@ namespace Aurora{
 
 	class Renderer {
 	public:
-        Renderer(std::string file);
-		void render();
+		void render(std::shared_ptr<Scene> scene);
         
         u_char *pixels;
         
@@ -43,22 +43,14 @@ namespace Aurora{
 		void outputStats();
 		void postRenderCleanup();
         
-		time_t m_renderTime;
+        std::shared_ptr<Scene> m_scene;
+		
+        time_t m_renderTime;
 		float m_renderProgress;
         std::string m_filename;
-		Transform *m_cameraTransform;
-        
+
         long m_numrays;
         double m_rayspeed;
-
-        Camera *m_renderCam;
-		std::vector<std::shared_ptr<AuroraObject> > m_objects;
-		std::vector<Light* > m_lights;
-		InfiniteAreaLight *m_envLight;
-		RenderEnvironment m_renderEnv;
-		AttributeState *m_attrs;
-		Display *m_displayDriver;
-        Integrator *m_integrator;
     };
 }
 

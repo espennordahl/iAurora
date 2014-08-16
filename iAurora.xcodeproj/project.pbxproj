@@ -10,6 +10,7 @@
 		232EA7811996696A008A4732 /* kdTreeAccelerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 232EA77F1996696A008A4732 /* kdTreeAccelerator.cpp */; };
 		232EA78519966B70008A4732 /* AURenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 232EA78419966B70008A4732 /* AURenderer.m */; };
 		232EA78719966E9E008A4732 /* tmp.asc in Resources */ = {isa = PBXBuildFile; fileRef = 232EA78619966E9E008A4732 /* tmp.asc */; };
+		237FB51D199ED368003B1B37 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 237FB51B199ED368003B1B37 /* scene.cpp */; };
 		23D0B93C198500FD00EEC329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93B198500FD00EEC329 /* Foundation.framework */; };
 		23D0B93E198500FD00EEC329 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93D198500FD00EEC329 /* CoreGraphics.framework */; };
 		23D0B940198500FD00EEC329 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93F198500FD00EEC329 /* UIKit.framework */; };
@@ -96,6 +97,8 @@
 		232EA78319966B70008A4732 /* AURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AURenderer.h; sourceTree = "<group>"; };
 		232EA78419966B70008A4732 /* AURenderer.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AURenderer.m; sourceTree = "<group>"; };
 		232EA78619966E9E008A4732 /* tmp.asc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tmp.asc; sourceTree = "<group>"; };
+		237FB51B199ED368003B1B37 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
+		237FB51C199ED368003B1B37 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		23D0B938198500FD00EEC329 /* iAurora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAurora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D0B93B198500FD00EEC329 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23D0B93D198500FD00EEC329 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,7 +111,7 @@
 		23D0B94B198500FD00EEC329 /* AUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUAppDelegate.m; sourceTree = "<group>"; };
 		23D0B94E198500FD00EEC329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23D0B950198500FD00EEC329 /* AUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUViewController.h; sourceTree = "<group>"; };
-		23D0B951198500FD00EEC329 /* AUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUViewController.m; sourceTree = "<group>"; };
+		23D0B951198500FD00EEC329 /* AUViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AUViewController.m; sourceTree = "<group>"; };
 		23D0B953198500FD00EEC329 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23D0B959198500FD00EEC329 /* iAuroraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iAuroraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D0B95A198500FD00EEC329 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -448,6 +451,8 @@
 				23D0B9A31985012C00EEC329 /* renderer.h */,
 				23D0B9A41985012C00EEC329 /* texture2D.cpp */,
 				23D0B9A51985012C00EEC329 /* texture2D.h */,
+				237FB51B199ED368003B1B37 /* scene.cpp */,
+				237FB51C199ED368003B1B37 /* scene.h */,
 			);
 			path = frontend;
 			sourceTree = "<group>";
@@ -737,6 +742,7 @@
 				23D0BA131985012C00EEC329 /* specTransmit.cpp in Sources */,
 				23D0B9F41985012C00EEC329 /* matrix4x4.cpp in Sources */,
 				23D0BA001985012C00EEC329 /* camera.cpp in Sources */,
+				237FB51D199ED368003B1B37 /* scene.cpp in Sources */,
 				23D0B9F21985012C00EEC329 /* bbox.cpp in Sources */,
 				23D0BA0B1985012C00EEC329 /* triangleGeo.cpp in Sources */,
 				23D0BA0F1985012C00EEC329 /* constant.cpp in Sources */,

@@ -17,7 +17,7 @@
 namespace Aurora {
 	class Display : FrontEndObject{
 	public:	
-		Display(int width, int height, std::string file, RenderEnvironment * renderEnv);
+		Display(int width, int height, RenderEnvironment * renderEnv);
 		
 		void setPixel(int width, int height, const Color &col, float alpha);
         void appendValue(int width, int height, const Color &col, float alpha);
