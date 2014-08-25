@@ -28,29 +28,39 @@ namespace Aurora {
         
         Color(){
             r=0; g=0; b=0;
+#ifdef DEBUG
             assert(!hasNaNs());
+#endif
         }
         Color(float _r, float _g, float _b):
         r(_r), g(_g), b(_b)
         {
+#ifdef DEBUG
             assert(!hasNaNs());
+#endif
         }
         Color(float c):
         r(c),g(c),b(c)
         {
+#ifdef DEBUG
             assert(!hasNaNs());
+#endif
         }
         
         Color(const Vector &v):
         r(v.x),g(v.y),b(v.z)
         {
+#ifdef DEBUG
             assert(!hasNaNs());
+#endif
         }
         
         Color(const Point &p):
         r(p.x),g(p.y),b(p.z)
         {
+#ifdef DEBUG
             assert(!hasNaNs());
+#endif
         }
         
 #pragma mark -

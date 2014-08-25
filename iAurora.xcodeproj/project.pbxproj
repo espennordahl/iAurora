@@ -10,6 +10,14 @@
 		232EA7811996696A008A4732 /* kdTreeAccelerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 232EA77F1996696A008A4732 /* kdTreeAccelerator.cpp */; };
 		232EA78519966B70008A4732 /* AURenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 232EA78419966B70008A4732 /* AURenderer.m */; };
 		232EA78719966E9E008A4732 /* tmp.asc in Resources */ = {isa = PBXBuildFile; fileRef = 232EA78619966E9E008A4732 /* tmp.asc */; };
+		234E111719A6811600185692 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 234E111619A6811600185692 /* config.json */; };
+		234E112019A6828F00185692 /* pPlaneShape1.obj in Resources */ = {isa = PBXBuildFile; fileRef = 234E111919A6828F00185692 /* pPlaneShape1.obj */; };
+		234E112119A6828F00185692 /* pPlaneShape2.obj in Resources */ = {isa = PBXBuildFile; fileRef = 234E111A19A6828F00185692 /* pPlaneShape2.obj */; };
+		234E112219A6828F00185692 /* pPlaneShape3.obj in Resources */ = {isa = PBXBuildFile; fileRef = 234E111B19A6828F00185692 /* pPlaneShape3.obj */; };
+		234E112319A6828F00185692 /* pPlaneShape4.obj in Resources */ = {isa = PBXBuildFile; fileRef = 234E111C19A6828F00185692 /* pPlaneShape4.obj */; };
+		234E112419A6828F00185692 /* pPlaneShape5.obj in Resources */ = {isa = PBXBuildFile; fileRef = 234E111D19A6828F00185692 /* pPlaneShape5.obj */; };
+		234E112519A6828F00185692 /* pPlaneShape6.obj in Resources */ = {isa = PBXBuildFile; fileRef = 234E111E19A6828F00185692 /* pPlaneShape6.obj */; };
+		234E112819A682BF00185692 /* pSphereShape3.obj in Resources */ = {isa = PBXBuildFile; fileRef = 234E112719A682BF00185692 /* pSphereShape3.obj */; };
 		237FB51D199ED368003B1B37 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 237FB51B199ED368003B1B37 /* scene.cpp */; };
 		23D0B93C198500FD00EEC329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93B198500FD00EEC329 /* Foundation.framework */; };
 		23D0B93E198500FD00EEC329 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D0B93D198500FD00EEC329 /* CoreGraphics.framework */; };
@@ -97,6 +105,14 @@
 		232EA78319966B70008A4732 /* AURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AURenderer.h; sourceTree = "<group>"; };
 		232EA78419966B70008A4732 /* AURenderer.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AURenderer.m; sourceTree = "<group>"; };
 		232EA78619966E9E008A4732 /* tmp.asc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tmp.asc; sourceTree = "<group>"; };
+		234E111619A6811600185692 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		234E111919A6828F00185692 /* pPlaneShape1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pPlaneShape1.obj; sourceTree = "<group>"; };
+		234E111A19A6828F00185692 /* pPlaneShape2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pPlaneShape2.obj; sourceTree = "<group>"; };
+		234E111B19A6828F00185692 /* pPlaneShape3.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pPlaneShape3.obj; sourceTree = "<group>"; };
+		234E111C19A6828F00185692 /* pPlaneShape4.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pPlaneShape4.obj; sourceTree = "<group>"; };
+		234E111D19A6828F00185692 /* pPlaneShape5.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pPlaneShape5.obj; sourceTree = "<group>"; };
+		234E111E19A6828F00185692 /* pPlaneShape6.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pPlaneShape6.obj; sourceTree = "<group>"; };
+		234E112719A682BF00185692 /* pSphereShape3.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pSphereShape3.obj; sourceTree = "<group>"; };
 		237FB51B199ED368003B1B37 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
 		237FB51C199ED368003B1B37 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		23D0B938198500FD00EEC329 /* iAurora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAurora.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,7 +247,7 @@
 		23D0B9EC1985012C00EEC329 /* shaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shaders.h; sourceTree = "<group>"; };
 		23D0B9ED1985012C00EEC329 /* shadingEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shadingEngine.cpp; sourceTree = "<group>"; };
 		23D0B9EE1985012C00EEC329 /* shadingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = shadingEngine.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		23D0B9F01985012C00EEC329 /* jsonParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = jsonParser.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		23D0B9F01985012C00EEC329 /* jsonParser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; lineEnding = 0; path = jsonParser.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		23D0B9F11985012C00EEC329 /* jsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = jsonParser.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		23D0BA221985014100EEC329 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		23D0BA241985014100EEC329 /* halton_enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = halton_enum.h; sourceTree = "<group>"; };
@@ -282,9 +298,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		234E111819A6826E00185692 /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				234E112719A682BF00185692 /* pSphereShape3.obj */,
+				234E111919A6828F00185692 /* pPlaneShape1.obj */,
+				234E111A19A6828F00185692 /* pPlaneShape2.obj */,
+				234E111B19A6828F00185692 /* pPlaneShape3.obj */,
+				234E111C19A6828F00185692 /* pPlaneShape4.obj */,
+				234E111D19A6828F00185692 /* pPlaneShape5.obj */,
+				234E111E19A6828F00185692 /* pPlaneShape6.obj */,
+			);
+			name = geometry;
+			sourceTree = "<group>";
+		};
 		23D0B92F198500FD00EEC329 = {
 			isa = PBXGroup;
 			children = (
+				234E111819A6826E00185692 /* geometry */,
 				232EA78619966E9E008A4732 /* tmp.asc */,
 				23D0B9701985011400EEC329 /* Aurora */,
 				23D0B941198500FD00EEC329 /* iAurora */,
@@ -373,6 +404,7 @@
 		23D0B9711985012C00EEC329 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				234E111619A6811600185692 /* config.json */,
 				23D0BA2A1985018400EEC329 /* constants.h */,
 				23D0B9721985012C00EEC329 /* attributes */,
 				23D0B9771985012C00EEC329 /* core */,
@@ -677,6 +709,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Espen Nordahl";
 				TargetAttributes = {
+					23D0B937198500FD00EEC329 = {
+						DevelopmentTeam = 9Z5LC5GT82;
+					};
 					23D0B958198500FD00EEC329 = {
 						TestTargetID = 23D0B937198500FD00EEC329;
 					};
@@ -708,12 +743,20 @@
 			files = (
 				23D0B954198500FD00EEC329 /* Images.xcassets in Resources */,
 				23D0BA4919851ED800EEC329 /* json_valueiterator.inl in Resources */,
+				234E112319A6828F00185692 /* pPlaneShape4.obj in Resources */,
+				234E111719A6811600185692 /* config.json in Resources */,
+				234E112019A6828F00185692 /* pPlaneShape1.obj in Resources */,
+				234E112819A682BF00185692 /* pSphereShape3.obj in Resources */,
 				23D0BA4619851ED800EEC329 /* json_internalmap.inl in Resources */,
+				234E112219A6828F00185692 /* pPlaneShape3.obj in Resources */,
 				23D0BA4519851ED800EEC329 /* json_internalarray.inl in Resources */,
+				234E112519A6828F00185692 /* pPlaneShape6.obj in Resources */,
 				23D0B946198500FD00EEC329 /* InfoPlist.strings in Resources */,
+				234E112119A6828F00185692 /* pPlaneShape2.obj in Resources */,
 				232EA78719966E9E008A4732 /* tmp.asc in Resources */,
 				23D0B94F198500FD00EEC329 /* Main.storyboard in Resources */,
 				23D0BA281985014100EEC329 /* halton_gen.py in Resources */,
+				234E112419A6828F00185692 /* pPlaneShape5.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,14 +956,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iAurora/iAurora-Prefix.pch";
+				GCC_UNROLL_LOOPS = NO;
 				INFOPLIST_FILE = "iAurora/iAurora-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/base/sw/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1",
 				);
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -930,14 +978,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iAurora/iAurora-Prefix.pch";
+				GCC_UNROLL_LOOPS = NO;
 				INFOPLIST_FILE = "iAurora/iAurora-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/base/sw/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1",
 				);
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

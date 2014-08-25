@@ -81,7 +81,8 @@ namespace Aurora {
     }
     
     Color SquareLight::eval( const Sample3D &sample, const Vector &Nn ) {
-        return color * m_intensity;
+        float d = dot(-lightN, normalize(sample.ray.direction));
+        return color * m_intensity * std::max(d, 0.f);
     }
     
     float SquareLight::pdf( Sample3D *sample, const Vector &Nn, const IntegrationDomain &integrationDomain){

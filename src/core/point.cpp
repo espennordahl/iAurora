@@ -23,7 +23,9 @@ x(_x),
 y(_y),
 z(_z)
 {
+#ifdef DEBUG
     assert(!hasNaNs());
+#endif
 }
 
 Point::Point( float f ):
@@ -31,7 +33,9 @@ x(f),
 y(f),
 z(f)
 {
+#ifdef DEBUG
     assert(!hasNaNs());
+#endif
 }
 
 Point::Point(){
@@ -43,7 +47,9 @@ x(v.x),
 y(v.y),
 z(v.z)
 {
+#ifdef DEBUG
     assert(!hasNaNs());
+#endif
 }
 
 bool Point::hasNaNs(){

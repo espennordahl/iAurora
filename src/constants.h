@@ -10,7 +10,7 @@
 #define Aurora_constants_h
 
 // bias
-#define CAUSTIC_BLUR 0.2
+#define CAUSTIC_BLUR 0.3
 #define FIREFLY 200
 
 // colors
@@ -28,10 +28,7 @@
 #define KD_EMPTYBONUS 1
 
 // kelemen albedo cache settings
-#define SPECALBEDO_SAMPLES 250000
-#define SPECALBEDO_COSTHETA_ENTRIES 64
-#define SPECALBEDO_ROUGHNESSS_ENTRIES 32
-#define SPECALBEDO_REFLECTANCE_ENTRIES 21
+#define SPECALBEDO_SAMPLES 4
 
     // quasi monte carlo
     // #define USE_HALTON
@@ -48,6 +45,6 @@
 #define VERSION "0.3"
 
 // base paths
-#define CONFIGPATH "/Users/espennordahl/Documents/Aurora/XCode/Aurora/Aurora/config.json"
+// #define CONFIGPATH "/Users/espennordahl/Documents/Aurora/XCode/Aurora/Aurora/config.json"
 
 #endif

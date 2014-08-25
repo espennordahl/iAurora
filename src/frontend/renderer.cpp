@@ -8,6 +8,8 @@
 
 #include "renderer.h"
 
+#include <dispatch/dispatch.h>
+
 #include "log.h"
 #define lcontext LOG_Renderer
 
@@ -42,43 +44,26 @@ void Renderer::renderImage(){
 	int width = m_scene->renderCam->getWidthSamples();
 	int height = m_scene->renderCam->getHeightSamples();
 
-    std::string fn = (*m_scene->renderEnv.stringGlobals)["fileName"];
-    if(fn == ""){
-        LOG_ERROR("Render output filename is blank");
-    }
-
     Integrator integrator = Integrator(&m_scene->renderEnv);
     
-    time_t drawTime;
-    time(&drawTime);
     int lightSamples = (*m_scene->renderEnv.globals)[LightSamples];
-    time_t currentTime;
-    time_t progressionStartTime;
-    time(&progressionStartTime);
 
-    for (int i=0; i < width*height; ++i) {
+    dispatch_apply(width*height, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(size_t i){
             // generate sample
         int x = i % width;
         int y = (int)i / width;
         Sample2D current_sample_2d = Sample2D(x, y);
         
-        Sample3D sample = m_scene->renderEnv.renderCam->convertSample(current_sample_2d, i);
+        Sample3D sample = m_scene->renderEnv.renderCam->convertSample(current_sample_2d, (int)i);
         
-        Integrator::IntegrationResult integrationResult = integrator.integrateCameraSample(sample, lightSamples);
+            // NOTE! This is somewhat sneaky. GCD casts integrator as const - I guess for thread safety - but
+            // I know we don't touch any shared data inside integrateCameraSample, so I re cast it.
+            // If this assumption ever breaks, bad things can and will happen.
+        Integrator::IntegrationResult integrationResult = ((Integrator*)&integrator)->integrateCameraSample(sample, lightSamples);
         
         m_scene->displayDriver->appendValue(x, y, integrationResult.color, integrationResult.alpha);
         m_numrays++;
-        
-        time(&currentTime);
-        int timeSinceLastDraw = difftime(currentTime, drawTime);
-        
-        if(timeSinceLastDraw > DRAW_DELAY) {
-                //            m_displayDriver->draw(height);
-            time(&drawTime);
-            LOG_INFO("Render progress: " << 100 * (i+1.f)/((float)width*height) << "%");
-            time(&currentTime);
-        }
-    }
+    });
 }
 
 

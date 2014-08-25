@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 #include "shapes.h"
 #include "lights.h"
 #include "materials.h"
@@ -225,7 +227,10 @@ inline Transform getTransformAttr(const std::string &name, Json::Value &root){
 
 inline std::shared_ptr<AuroraObject> getGeometry(Transform cameraTransform, Json::Value &root, RenderEnvironment *renderEnv){
         // read all standard data
-    std::string path        = getStringAttr("path", root);
+    NSURL *nspath = [[NSBundle mainBundle] URLForResource:[NSString stringWithCString: getStringAttr("path", root).c_str()
+                                                                                encoding: [NSString defaultCStringEncoding]]
+                                               withExtension:@"obj"];
+    std::string path        = [nspath.path UTF8String];
     std::string name        = getStringAttr("name", root);
     std::string material    = getStringAttr("material", root);
     Transform objTransform = getTransformAttr("transforms", root);

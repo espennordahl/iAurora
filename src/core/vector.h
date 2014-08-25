@@ -36,13 +36,17 @@ namespace Aurora{
         explicit Vector(float _x, float _y, float _z):
         x(_x), y(_y), z(_z) {
                 // check for NaNs
+#ifdef DEBUG
             assert(!hasNaNs());
+#endif
         }
         
         explicit Vector( float f ):
         x(f), y(f), z(f)
         {
+#ifdef DEBUG
             assert(!hasNaNs());
+#endif
         }
         
         explicit Vector(){

@@ -32,7 +32,7 @@ namespace Aurora {
         
 	private:
         void preCalcAlbedo();
-        float getAlbedo(float costheta, float roughness);
+        float getAlbedo(const Vector &Vn, const Vector &Nn, const ShadingGeometry &shdGeo, float roughness);
         
         
 		Brdf * diffBrdf;

@@ -39,28 +39,28 @@ namespace Aurora {
             // build hash map
         StringMap replacementMap;
 
-        Json::Value deserializeRoot;
-        Json::Reader reader;
-        std::string filename = CONFIGPATH;
-        std::ifstream sceneDescription( filename.c_str() );
-        if ( !reader.parse(sceneDescription, deserializeRoot) ){
-            LOG_ERROR("Couldn't parse file: " << filename);
-            return "stringUtilsError";
-        }
-        else{
-            LOG_DEBUG("Parsing json file: " << filename);
-            if( deserializeRoot.size() <= 0 ) {
-                LOG_ERROR("No keys in json object: " << filename);
-                return "stringUtilsError";
-            }
-            else {
-                replacementMap["$BASE"] = deserializeRoot["basepath"].asString();
-                replacementMap["$CACHE"] = deserializeRoot["cachepath"].asString();
-                replacementMap["$RENDER"] = deserializeRoot["renderpath"].asString();
-                replacementMap["$TEXTURE"] = deserializeRoot["texturepath"].asString();
-                replacementMap["$HDRI"] = deserializeRoot["hdripath"].asString();
-            }
-        }
+//        Json::Value deserializeRoot;
+//        Json::Reader reader;
+//        std::string filename;
+//        std::ifstream sceneDescription( filename.c_str() );
+//        if ( !reader.parse(sceneDescription, deserializeRoot) ){
+//            LOG_ERROR("Couldn't parse file: " << filename);
+//            return "stringUtilsError";
+//        }
+//        else{
+//            LOG_DEBUG("Parsing json file: " << filename);
+//            if( deserializeRoot.size() <= 0 ) {
+//                LOG_ERROR("No keys in json object: " << filename);
+//                return "stringUtilsError";
+//            }
+//            else {
+//                replacementMap["$BASE"] = deserializeRoot["basepath"].asString();
+//                replacementMap["$CACHE"] = deserializeRoot["cachepath"].asString();
+//                replacementMap["$RENDER"] = deserializeRoot["renderpath"].asString();
+//                replacementMap["$TEXTURE"] = deserializeRoot["texturepath"].asString();
+//                replacementMap["$HDRI"] = deserializeRoot["hdripath"].asString();
+//            }
+//        }
         // loop through keywords and replace
         std::string outputString = inputString;
         bool hasKeys = true;

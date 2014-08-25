@@ -79,6 +79,7 @@
     NSLog(@"Created image with size: %f %f", image.size.width, image.size.height);
     
     [(UIImageView *)self.view setImage:image];
+    [(UIImageView *)self.view setFrame:CGRectMake(0, 0, width*2., height*2.)];
     
     NSLog(@"Updated view. You should see a render at this point..");
     
@@ -93,6 +94,8 @@
 
 -(void)didClick:(id)sender
 {
+    UIButton *button = sender;
+    [button setTitle:@"Rendering..." forState:UIControlStateNormal];
     [self performSelectorInBackground:@selector(render) withObject:self];
 }
 
